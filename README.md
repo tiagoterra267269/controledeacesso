@@ -2,7 +2,6 @@
 
 Projeto de Api responsável por fazer a autenticação de usuários.
 
-
 # Como executar
 
 Instale as dependências: (env)$ pip install -r requirements.txt;
