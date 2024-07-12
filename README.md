@@ -16,7 +16,10 @@ Crie a rede:
 docker network create mvp_network
 
 Execute os containers conforme abaixo:
+
 > docker run -d --name controledeacessoapi --network mvp_network -p 5000:5000 controledeacessoapi
+
 > docker run -d --name eventos-web --network mvp_network -p 8080:80 eventos-web
+
 > docker run -d --name eventosapi --network mvp_network -p 5001:5001 eventosapi
 
