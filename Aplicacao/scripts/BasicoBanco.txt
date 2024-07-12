@@ -1,0 +1,24 @@
+CREATE TABLE Perfil 
+( 
+ Id INT PRIMARY KEY,  
+ Nome VARCHAR(n),  
+ Ativo CHAR(n),  
+); 
+
+CREATE TABLE Usuario 
+( 
+ Id INT PRIMARY KEY,  
+ Ativo CHAR(n) NOT NULL,  
+ Login VARCHAR(n),  
+ Senha VARCHAR(n),  
+ Descricao VARCHAR(n),  
+); 
+
+CREATE TABLE Possui 
+( 
+ idUsuario INT PRIMARY KEY,  
+ idPerfil INT PRIMARY KEY,  
+); 
+
+ALTER TABLE Possui ADD FOREIGN KEY(idUsuario) REFERENCES Usuario (idUsuario)
+ALTER TABLE Possui ADD FOREIGN KEY(idPerfil) REFERENCES Perfil (idPerfil)
